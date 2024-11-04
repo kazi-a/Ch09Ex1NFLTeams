@@ -1,0 +1,17 @@
+﻿@model NFLTeams.Models.TeamsViewModel
+
+@{
+    ViewData["Title"] = "Change User Name"; // Set the title for the page
+}
+
+<div class="text-center">
+    <h2>Change User Name</h2>
+    <form asp-action="Change" method="post">
+        <input asp-for="Username" placeholder="Type name here" class="mb-3" /><br />
+        <button type="submit" class="btn btn-primary">Change Name</button>
+        <a asp-action="Index" asp-controller="Home" class="btn btn-primary"
+           asp-route-activeConf="@Model.ActiveConf"
+           asp-route-activeDiv="@Model.ActiveDiv">Back to Home Page</a>
+    </form>
+    <br />
+</div>
